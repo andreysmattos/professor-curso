@@ -1,0 +1,17 @@
+{
+    "name": "cursos_professores/tabelas",
+    "require": {
+        "php": ">=5.6"
+    },
+    "authors": [
+        {
+            "name": "Andrey Mattos",
+            "email": "andreysmattos@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    }
+}
