@@ -81,3 +81,23 @@ INNER JOIN `professor_curso` as pc
 ON p.idProfessor = pc.id_professor
 INNER JOIN `curso` as c
 ON c.idCurso = pc.id_curso;
+
+
+# Pesquisa por curso para usar no PHP
+SELECT p.nome, p.sexo, p.idade, c.nome as 'nome_curso'
+		FROM `professor` as p
+		INNER JOIN `professor_curso` as pc 
+		ON p.idProfessor = pc.id_professor
+		INNER JOIN `curso` as c
+		ON c.idCurso = pc.id_curso
+		WHERE c.nome LIKE '%html%';
+
+
+# Pesquisa por professor para usar no PHP
+SELECT p.nome, p.sexo, p.idade, c.nome as 'nome_curso'
+		FROM `professor` as p
+		INNER JOIN `professor_curso` as pc 
+		ON p.idProfessor = pc.id_professor
+		INNER JOIN `curso` as c
+		ON c.idCurso = pc.id_curso
+		WHERE p.nome LIKE '%roge%'
