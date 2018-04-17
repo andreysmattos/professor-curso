@@ -101,3 +101,16 @@ SELECT p.nome, p.sexo, p.idade, c.nome as 'nome_curso'
 		INNER JOIN `curso` as c
 		ON c.idCurso = pc.id_curso
 		WHERE p.nome LIKE '%roge%'
+
+
+
+# TESTE BRUNO // FUNCIONTOU
+SELECT p.nome , 
+GROUP_CONCAT(DISTINCT c.nome ORDER BY c.nome DESC SEPARATOR ', ') as 'Cursos',
+ p.sexo, p.idade
+		FROM `professor` as p
+		INNER JOIN `professor_curso` as pc 
+		ON p.idProfessor = pc.id_professor
+		INNER JOIN `curso` as c
+		ON c.idCurso = pc.id_curso
+		WHERE p.nome LIKE '%roge%'
